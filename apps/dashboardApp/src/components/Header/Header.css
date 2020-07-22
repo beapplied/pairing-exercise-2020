@@ -1,0 +1,20 @@
+.wrap {
+    min-height: 100px;
+    background-color: #131a29;
+    display: flex;
+    justify-content: center;
+}
+
+.inner {
+    width: 100%;
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.appliedLogo {
+    max-height: 60px;
+    width: auto;
+}
