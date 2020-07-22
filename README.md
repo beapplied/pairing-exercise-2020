@@ -1,59 +1,72 @@
-## What is this thing?
+# Welcome to the Applied Technical & Pairing Task!
 
-This repo is a super scaled down version of our production app. Using a Vue front end and an node.js backend using express and Sequelize. To make things simple we'll be using sqlite, a little file-based database.
+This repo is a super scaled down version of our production app and uses 🎨 Vue frontend,  🧰 Node.js with Express and 📊 Sequelize. We've also included a small sqlite database to keep things simple.
 
-## Getting started
+## Quick start
 
-Install the main app dependencies
+ **1. Clone this repository**
 
-```
-yarn
-```
+ **Please do not to fork this repository**. We'll be going through your solution during your interview so no need to push your changes or send it to us.
 
-Set up the db
+ **2. Install the main app dependencies & set up the database**
 
-```
-sequelize init
-```
+     yarn
+     sequelize init
+     yarn add mysql2
+     npx seqelize-cli db:migrate
 
-```
-yarn add mysql2
-```
+ **3. Start the backend 🧰**
 
-```
-npx sequelize-cli db:migrate
-```
+    nodemon app.js
+*(You may need to install `nodemon` globally first)*
 
-Install nodemon globally (if you don't already have it) - we'll be using nodemon to run + restart our node.js app
+ **4. Start the frontend 🎨**
 
-```
-npm install -g nodemon
-```
+    cd apps/dashboardApp
+    yarn && yarn run serve
 
-Install the deependencies for the frontend app
-
-```
-cd apps/dashboard
-yarn
-```
-
-You can then start the backend app (from the root of this repo) with
-
-```
-nodemon app.js
-```
-
-And the frontend with
-
-```
-yarn run serve
-```
+> **Tech test quirks and gotchas** 
+>
+> This was thrown together stupidly quickly so there are some little gotchas (feel free to add more to
+> this list if you find them):
+> 
+> -   the sqlite database is fine but you can't have it open in a db browser while using it (which makes sense as it's a file) - theres
+> probs a fix but I couldn't find it quickly (as an aside if you do want
+> to peek inside your sqlite db I recommend 
+> [sqlitebrowser](https://sqlitebrowser.org/))
+>     
+> -   The email template editing thing is a bit jank, it loads data from the component into the store badly (not an issue in prod where we use
+> modals for editing) but it means you need to access that page from the
+> root. Refreshing or loading it directly messes it up.
 
 
-## Gotchas
+## The Brief
 
-This was thrown together stupidly quickly so there are some little gotchas (feel free to add more to this list if you find them):
+We send emails through the app at different stages of an applicants journey. We also allow organisations to customise those emails through their organisation settings. This is the part of the app you'll be working on as this repo includes a *very stripped down* version of our email template management functionality
 
-- the sqlite database is fine but you can't have it open in a db browser while using it (which makes sense as it's a file) - theres probs a fix but I couldn't find it quickly (as an aside if you do want to peek inside your sqlite db I recommend [sqlitebrowser](https://sqlitebrowser.org/))
+![Video taken from the main app](gifs/main-app.gif)
 
-- The email template editing thing is a bit jank, it loads data from the component into the store badly (not an issue in prod where we use modals for editing) but it means you need to access that page from the root. Refreshing or loading it directly messes it up. 
+*Video taken from the main Applied app*
+
+In this build a user can update the **invite email template** but we've forgotten to add functionality which allows organisations to add a custom subject line. We would like you to add that functionality back in.
+
+
+![Video taken from the test app](gifs/test-app.gif)
+
+## Acceptance Criteria 
+
+As a user, I want to be able to add a custom subject line to all email templates. 
+
+*We should also include a test to check this is working as expected*
+
+## Next steps
+
+No need to commit your code as during your interview you will share your screen and be asked to talk through your process and solution. 
+
+We will then complete a short pair programming exercise on the same repository so it's a good idea to have it running before the interview starts.
+
+
+
+**Good luck!**
+
+Applied Team 😊
