@@ -30,20 +30,20 @@ Install nodemon globally (if you don't already have it) - we'll be using nodemon
 npm install -g nodemon
 ```
 
-Install the deependencies for the frontend app
-
-```
-cd apps/dashboard
-yarn
-```
-
 You can then start the backend app (from the root of this repo) with
 
 ```
 nodemon app.js
 ```
 
-And the frontend with
+Install the deependencies for the frontend app
+
+```
+cd apps/dashboardApp
+yarn
+```
+
+And start the frontend with
 
 ```
 yarn run serve
