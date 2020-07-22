@@ -10,6 +10,20 @@ Install the main app dependencies
 yarn
 ```
 
+Set up the db
+
+```
+sequelize init
+```
+
+```
+yarn add mysql2
+```
+
+```
+npx sequelize-cli db:migrate
+```
+
 Install nodemon globally (if you don't already have it) - we'll be using nodemon to run + restart our node.js app
 
 ```
@@ -29,7 +43,7 @@ You can then start the backend app (from the root of this repo) with
 nodemon app.js
 ```
 
-And thee frontend with
+And the frontend with
 
 ```
 yarn run serve
