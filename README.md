@@ -1,6 +1,6 @@
 # Welcome to the Applied Technical & Pairing Task!
 
-This repo is a super scaled down version of our production app and uses 🎨 Vue frontend,  🧰 Node.js with Express and 📊 Sequelize for database abstractions and migrations. We've also included a small sqlite database to keep things simple.
+This repo is a super scaled down version of our production app and uses 🎨  [Vue](https://vuejs.org/) frontend,  🧰  Node.js with Express and 📊  [Sequelize](https://sequelize.org/) for database abstractions and migrations. We've also included a small sqlite database to keep things simple.
 
 ## Quick start
 
@@ -19,7 +19,7 @@ This repo is a super scaled down version of our production app and uses 🎨 Vue
     nodemon app.js
 *(You may need to install `nodemon` globally first)*
 
- **4. Start the frontend 🎨**
+ **4. Start the frontend 🎨** 
 
     cd apps/dashboardApp
     yarn && yarn run serve
@@ -56,7 +56,7 @@ In this build a user can update the **invite email template** but we've forgotte
 
 As a user, I want to be able to add a custom subject line to all email templates. 
 
-*We should also include a test to check this is working as expected*
+*You don't need to include any tests*
 
 ## Next steps
 
