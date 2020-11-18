@@ -1,6 +1,6 @@
 # Welcome to the Applied Technical & Pairing Task!
 
-This repo is a super scaled down version of our production app and uses 🎨 Vue frontend,  🧰 Node.js with Express and 📊 Sequelize. We've also included a small sqlite database to keep things simple.
+This repo is a super scaled down version of our production app and uses 🎨 Vue frontend,  🧰 Node.js with Express and 📊 Sequelize for database abstractions and migrations. We've also included a small sqlite database to keep things simple.
 
 ## Quick start
 
@@ -12,7 +12,6 @@ This repo is a super scaled down version of our production app and uses 🎨 Vue
 
      yarn
      sequelize init
-     yarn add mysql2
      npx seqelize-cli db:migrate
 
  **3. Start the backend 🧰**
