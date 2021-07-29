@@ -11,13 +11,12 @@ This repo is a super scaled down version of our production app and uses 🎨  [V
  **2. Install the main app dependencies & set up the database**
 
      yarn
-     sequelize init
-     npx seqelize-cli db:migrate
+     yarn init-db
+     yarn migrate-db
 
  **3. Start the backend 🧰**
 
-    nodemon app.js
-*(You may need to install `nodemon` globally first)*
+    yarn start
 
  **4. Start the frontend 🎨** 
 
@@ -29,6 +28,8 @@ This repo is a super scaled down version of our production app and uses 🎨  [V
 > This was thrown together stupidly quickly so there are some little gotchas (feel free to add more to
 > this list if you find them):
 > 
+> -   The backend always needs to be started before the frontend or both apps will try to compete for the same port and not tell you.
+>
 > -   the sqlite database is fine but you can't have it open in a db browser while using it (which makes sense as it's a file) - theres
 > probs a fix but I couldn't find it quickly (as an aside if you do want
 > to peek inside your sqlite db I recommend 
@@ -37,7 +38,6 @@ This repo is a super scaled down version of our production app and uses 🎨  [V
 > -   The email template editing thing is a bit jank, it loads data from the component into the store badly (not an issue in prod where we use
 > modals for editing) but it means you need to access that page from the
 > root. Refreshing or loading it directly messes it up.
-
 
 ## The Brief
 
